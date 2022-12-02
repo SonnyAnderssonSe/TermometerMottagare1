@@ -1,5 +1,6 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    basic.showString("")
+    basic.showString("" + (receivedNumber))
+    basic.pause(2000)
     basic.showString("C")
     basic.showIcon(IconNames.Square)
     if (receivedNumber < MinTemp) {
@@ -18,6 +19,7 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         `)
     basic.showString("" + (MinTemp))
+    basic.pause(500)
 })
 input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
@@ -28,6 +30,7 @@ input.onButtonPressed(Button.B, function () {
         . . # . .
         `)
     basic.showString("" + (MaxTemp))
+    basic.pause(500)
 })
 let MinTemp = 0
 let MaxTemp = 0
